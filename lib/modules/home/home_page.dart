@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/config/text_style.dart';
-import 'package:movie_app/modules/home/components/category_bar.dart';
-import 'package:movie_app/modules/home/components/header.dart';
-import 'package:movie_app/modules/home/components/search_bar.dart';
-import 'package:movie_app/modules/home/components/slider.dart';
+
+import '../../config/text_style.dart';
+import 'components/category_bar.dart';
+import 'components/coming_soon.dart';
+import 'components/header.dart';
+import 'components/search_bar.dart';
+import 'components/slider.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -29,7 +32,9 @@ class _HomePageState extends State<HomePage> {
           //title
           buildTitle('Now Playing'),
           //slider
-          SliderBar(size: size)
+          SliderBar(size: size),
+          buildTitle('Coming Soon'),
+          const ComingSoon(),
         ],
       )),
     );
@@ -45,5 +50,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
-

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/config/text_style.dart';
-import 'package:movie_app/constants/assets_path.dart';
+
+import '../../../config/text_style.dart';
+import '../../../constants/assets_path.dart';
+
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({

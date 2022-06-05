@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DarkTheme {
-  static final lightBlue = Color(0xFF48cae7).withOpacity(0.1);
+  static final lightBlue = const Color(0xFF48cae7).withOpacity(0.1);
   static const blueMain = Color(0xFF3D58F8);
   static const blueIllustration = Color(0xFF2C4BA1);
   static const darkBlueIllustration = Color(0xFF1E3577);
@@ -22,7 +22,7 @@ class GradientPalette {
   static const blue1 = Color(0xFF3E60F9);
   static const blue2 = Color(0xFF3D54F8);
   static const lightBlue1 = Color(0xFF449EFF);
-  static final lightBlue2 = Color(0xFF1DC7F7).withOpacity(0.94);
-  static final black1= Color(0xFF111D42).withOpacity(0);
+  static final lightBlue2 = const Color(0xFF1DC7F7).withOpacity(0.94);
+  static final black1= const Color(0xFF111D42).withOpacity(0);
   static const black2 = Color(0xFF111D42);
 }

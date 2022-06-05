@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:movie_app/config/app_color.dart';
-import 'package:movie_app/config/text_style.dart';
-import 'package:movie_app/constants/assets_path.dart';
+
+import '../../../config/app_color.dart';
+import '../../../config/text_style.dart';
+import '../../../constants/assets_path.dart';
+
 
 class SearchBar extends StatelessWidget {
   const SearchBar({

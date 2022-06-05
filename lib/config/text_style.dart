@@ -52,7 +52,7 @@ class TxtStyle {
 }
 
 class GradientText extends StatelessWidget {
-  GradientText(
+  const GradientText(
     this.text, {
     @required this.gradient,
   });
@@ -68,7 +68,7 @@ class GradientText extends StatelessWidget {
       ),
       child: Text(
         text,
-        style: TextStyle(
+        style: const TextStyle(
           // The color must be set to white for this to work
           color: Colors.white,
           fontSize: 16,

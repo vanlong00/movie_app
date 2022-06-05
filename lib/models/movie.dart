@@ -52,26 +52,26 @@ final List<Movie> movies = [
       trailerImg: '',
       casters: [],
       trailers: []),
-  Movie(
-      backgroundImg: 'assets/images/movie_dragon.png',
-      posterImg: AssetPath.posterScoobx2,
-      title: 'The Spongebob Movie',
-      trailerImg: '',
-      casters: [],
-      trailers: []),
-  Movie(
-      backgroundImg: 'assets/images/movie_dragon.png',
-      posterImg: AssetPath.posterFrozenx2,
-      title: 'Frozen II',
-      trailerImg: '',
-      casters: [],
-      trailers: []),
-  Movie(
-      backgroundImg: 'assets/images/movie_dragon.png',
-      posterImg: AssetPath.posterTopUpx2,
-      title: 'Top Up Movie',
-      trailerImg: '',
-      casters: [],
-      trailers: []),
+  // Movie(
+  //     backgroundImg: 'assets/images/movie_dragon.png',
+  //     posterImg: AssetPath.posterScoobx2,
+  //     title: 'The Spongebob Movie',
+  //     trailerImg: '',
+  //     casters: [],
+  //     trailers: []),
+  // Movie(
+  //     backgroundImg: 'assets/images/movie_dragon.png',
+  //     posterImg: AssetPath.posterFrozenx2,
+  //     title: 'Frozen II',
+  //     trailerImg: '',
+  //     casters: [],
+  //     trailers: []),
+  // Movie(
+  //     backgroundImg: 'assets/images/movie_dragon.png',
+  //     posterImg: AssetPath.posterTopUpx2,
+  //     title: 'Top Up Movie',
+  //     trailerImg: '',
+  //     casters: [],
+  //     trailers: []),
   
 ];
