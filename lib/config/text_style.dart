@@ -44,7 +44,7 @@ class TxtStyle {
       color: DarkTheme.white,
       decoration: TextDecoration.none);
   static const heading4Light = TextStyle(
-      fontWeight: FontWeight.w200,
+      fontWeight: FontWeight.w300,
       fontSize: 16,
       height: 1.2,
       color: DarkTheme.white,
@@ -52,6 +52,7 @@ class TxtStyle {
 }
 
 class GradientText extends StatelessWidget {
+  // ignore: use_key_in_widget_constructors
   const GradientText(
     this.text, {
     @required this.gradient,

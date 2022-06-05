@@ -1,14 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:movie_app/config/text_style.dart';
+import 'package:movie_app/constants/app_constants.dart';
 import 'package:movie_app/widgets/star.dart';
 
 import '../../config/app_color.dart';
 import '../../constants/assets_path.dart';
 import 'components/arrow_back.dart';
 import 'components/back_ground_widget.dart';
+import 'components/cast_bar.dart';
+import 'components/trailer_bar.dart';
 
-class MovieDetailPage extends StatelessWidget {
+class MovieDetailPage extends StatefulWidget {
   const MovieDetailPage({Key? key}) : super(key: key);
+
+  @override
+  State<MovieDetailPage> createState() => _MovieDetailPageState();
+}
+
+class _MovieDetailPageState extends State<MovieDetailPage>
+    with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 2, vsync: this);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -89,11 +106,83 @@ class MovieDetailPage extends StatelessWidget {
                     )
                   ],
                 ),
+              ),
+              SizedBox(
+                height: size.height - 120,
+                child: Column(
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.only(top: 16),
+                      alignment: Alignment.center,
+                      width: size.width,
+                      child: TabBar(
+                        tabs: const [
+                          Tab(
+                            text: 'About Movie',
+                          ),
+                          Tab(
+                            text: 'About Movie',
+                          ),
+                        ],
+                        controller: _tabController,
+                        indicatorSize: TabBarIndicatorSize.label,
+                        labelStyle: TxtStyle.heading3,
+                        unselectedLabelStyle: TxtStyle.heading3,
+                      ),
+                    ),
+                    Expanded(
+                      child: TabBarView(
+                        controller: _tabController,
+                        children: [
+                          SingleChildScrollView(
+                            scrollDirection: Axis.vertical,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: [
+                                buildTitle('Synopsis'),
+                                const Padding(
+                                  padding: EdgeInsets.only(left: 24),
+                                  child: Text(
+                                    AppConstant.exampleContent,
+                                    style: TxtStyle.heading4Light,
+                                  ),
+                                ),
+                                buildTitle('Cast & Crew'),
+                                CastBar(size: size),
+                                buildTitle('Trailer and Song'),
+                                const TrailerBar(),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            alignment: Alignment.center,
+                            child: const Text('Review Page'),
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               )
             ],
-          )
+          ),
         ],
       )),
     );
   }
+
+  Padding buildTitle(String content) {
+    return Padding(
+      padding: const EdgeInsets.all(24),
+      child: Text(
+        content,
+        style: TxtStyle.heading2,
+      ),
+    );
+  }
 }
+
+
+
+
+
