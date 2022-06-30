@@ -52,26 +52,65 @@ final List<Movie> movies = [
       trailerImg: '',
       casters: [],
       trailers: []),
-  // Movie(
-  //     backgroundImg: 'assets/images/movie_dragon.png',
-  //     posterImg: AssetPath.posterScoobx2,
-  //     title: 'The Spongebob Movie',
-  //     trailerImg: '',
-  //     casters: [],
-  //     trailers: []),
-  // Movie(
-  //     backgroundImg: 'assets/images/movie_dragon.png',
-  //     posterImg: AssetPath.posterFrozenx2,
-  //     title: 'Frozen II',
-  //     trailerImg: '',
-  //     casters: [],
-  //     trailers: []),
-  // Movie(
-  //     backgroundImg: 'assets/images/movie_dragon.png',
-  //     posterImg: AssetPath.posterTopUpx2,
-  //     title: 'Top Up Movie',
-  //     trailerImg: '',
-  //     casters: [],
-  //     trailers: []),
+  Movie(
+      backgroundImg: 'assets/images/movie_dragon.png',
+      posterImg: AssetPath.posterScoobx2,
+      title: 'The Spongebob Movie',
+      trailerImg: '',
+      casters: [],
+      trailers: []),
+  Movie(
+      backgroundImg: 'assets/images/movie_dragon.png',
+      posterImg: AssetPath.posterFrozenx2,
+      title: 'Frozen II',
+      trailerImg: '',
+      casters: [],
+      trailers: []),
+  Movie(
+      backgroundImg: 'assets/images/movie_dragon.png',
+      posterImg: AssetPath.posterTopUpx2,
+      title: 'Top Up Movie',
+      trailerImg: '',
+      casters: [],
+      trailers: []),
   
 ];
+
+enum TicketStates { idle, busy, active }
+
+final List<String> days = ['SAT', 'SUN', 'MON', 'TUE'];
+final List<String> times = ['12:20', '14:30', '16:40', '19:00'];
+
+final List<TicketStates> dateStates = [
+  TicketStates.idle,
+  TicketStates.active,
+  TicketStates.busy,
+  TicketStates.idle
+];
+final List<TicketStates> timeStates_1 = [
+  TicketStates.idle,
+  TicketStates.idle,
+  TicketStates.busy,
+  TicketStates.idle
+];
+final List<TicketStates> timeStates_2 = [
+  TicketStates.idle,
+  TicketStates.busy,
+  TicketStates.active,
+  TicketStates.idle
+];
+final List<TicketStates> timeStates_3 = [
+  TicketStates.idle,
+  TicketStates.busy,
+  TicketStates.idle,
+  TicketStates.idle
+];
+final List<TicketStates> timeStates_4 = [
+  TicketStates.idle,
+  TicketStates.busy,
+  TicketStates.idle,
+  TicketStates.idle
+];
+
+final List<String> seatRow = ['A', 'B', 'C', 'D', 'E'];
+final List<String> seatNumber = ['1', '2', '3', '4', '5', '6'];

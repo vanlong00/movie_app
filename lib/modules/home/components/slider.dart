@@ -1,11 +1,11 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:movie_app/config/app_color.dart';
+import 'package:movie_app/config/text_style.dart';
+import 'package:movie_app/models/movie.dart';
+import 'package:movie_app/modules/selectCinema/select_cinema_page.dart';
+import 'package:movie_app/widgets/star.dart';
 
-import '../../../config/app_color.dart';
-import '../../../config/text_style.dart';
-import '../../../models/movie.dart';
-import '../../../widgets/star.dart';
-import '../../movieDetail/movie_detail_page.dart';
 
 class SliderBar extends StatelessWidget {
   const SliderBar({
@@ -23,7 +23,7 @@ class SliderBar extends StatelessWidget {
                   return GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => const MovieDetailPage()));
+                          MaterialPageRoute(builder: (context) => const SelectCinemaPage()));
                     },
                     child: Stack(children: [
                       Container(

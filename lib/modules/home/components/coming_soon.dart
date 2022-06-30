@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../../../models/movie.dart';
-
+import 'package:movie_app/models/movie.dart';
+import 'package:movie_app/modules/movieDetail/movie_detail_page.dart';
 
 class ComingSoon extends StatelessWidget {
   const ComingSoon({
@@ -16,9 +15,17 @@ class ComingSoon extends StatelessWidget {
         children: movies
             .map((e) => Builder(builder: (context) {
                   return Expanded(
-                      child: Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 4),
-                    child: Image.asset(e.posterImg),
+                      child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const MovieDetailPage()));
+                    },
+                    child: Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 4),
+                      child: Image.asset(e.posterImg),
+                    ),
                   ));
                 }))
             .toList(),
