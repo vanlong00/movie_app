@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:movie_app/config/app_color.dart';
 import 'package:movie_app/config/text_style.dart';
-import 'package:movie_app/constants/assets_path.dart';
 import 'package:movie_app/models/movie.dart';
 import 'package:movie_app/modules/selectCinema/components/custom_header.dart';
 import 'package:movie_app/modules/selectCinema/components/next_button.dart';
+import 'package:movie_app/modules/selectCinema/components/select_country.dart';
 import 'package:movie_app/modules/selectCinema/select_seat_page.dart';
 
 class SelectCinemaPage extends StatelessWidget {
@@ -24,38 +24,7 @@ class SelectCinemaPage extends StatelessWidget {
                 size: size,
                 content: 'Ralp Breaks The\nInternet',
               ),
-              Container(
-                margin: const EdgeInsets.symmetric(vertical: 16, horizontal: 4),
-                height: size.height / 14,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(color: DarkTheme.white)),
-                child: Row(
-                  children: const [
-                    Expanded(
-                      child: TextField(
-                        decoration: InputDecoration(
-                            hintText: 'Select Your Country',
-                            hintStyle: TxtStyle.heading4,
-                            icon: Padding(
-                              padding: EdgeInsets.only(left: 18),
-                              child: ImageIcon(
-                                AssetImage(AssetPath.iconLocation),
-                                color: DarkTheme.white,
-                              ),
-                            )),
-                      ),
-                    ),
-                    Padding(
-                        padding: EdgeInsets.only(right: 8.0),
-                        child: Icon(
-                          Icons.keyboard_arrow_down,
-                          size: 36,
-                          color: DarkTheme.white,
-                        )),
-                  ],
-                ),
-              ),
+              SelectCountryWidget(size: size),
               buildTitle('Choose Date'),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 24.0),
@@ -156,6 +125,8 @@ class SelectCinemaPage extends StatelessWidget {
     );
   }
 }
+
+
 
 Color _getColor(TicketStates state) {
   switch (state) {
